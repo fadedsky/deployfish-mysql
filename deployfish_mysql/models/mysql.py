@@ -323,7 +323,7 @@ class MySQLDatabaseManager(Manager):
         Returns:
             The output of loading the file.
         """
-        success, output, filename = obj.cluster.push_file(filepath, ssh_target=ssh_target)
+        success, output, filename = obj.cluster.push_file(filepath, ssh_target=ssh_target, verbose=verbose)
         if not success:
             host = 'NO HOST'
             if ssh_target:
